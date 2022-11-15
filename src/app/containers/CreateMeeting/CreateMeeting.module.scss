@@ -1,0 +1,44 @@
+.text-gray {
+    color: #5d6368 !important;
+}
+.title {
+    font-size: 4.5rem !important;
+    font-weight: 400 !important;
+}
+.text-2xl {
+    font-size: 1.8rem !important;
+}
+.btn {
+    height: 45px;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    background-color: #1a73e8;
+    border-radius: 4px;
+}
+.btn:hover, .btn:active {
+    background-color: #237bed;
+}
+.input {
+    height: 45px;
+    border-radius: 4px;
+    padding-left: 15px;
+    border: 1px solid #757678;
+}
+.input input::placeholder {
+    color: #757678 !important;
+}
+.item-icon {
+    margin-right: 30px;
+}
+.text-16 {
+    font-size: 16px;
+}
+
+
+.font-normal {
+    font-weight: 500 !important;
+}
+

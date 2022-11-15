@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ant-popover-inner-content {
+    padding: 0 !important;
+}
+
+.h-remaining{
+    height: calc(100vh - 70px);
+}
+
+.intro-slider .slick-active button {
+    background-color: #5e5ef9 !important;
+}
