@@ -1,3 +1,5 @@
+import 'index.css';
+import 'antd/dist/antd.min.css';
 import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
 // Use consistent styling

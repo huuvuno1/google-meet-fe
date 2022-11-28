@@ -3,3 +3,4 @@ dist
 capacitor.config.ts
 /config
 /internals
+build

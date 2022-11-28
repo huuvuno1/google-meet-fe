@@ -1,0 +1,21 @@
+.icon-large {
+    font-size: 2.1rem;
+}
+
+.text-gray-500 {
+    color: #666a72 !important;
+}
+
+.wrapper-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.wrapper-icon:hover {
+    background-color: #f5f5f5;
+}
