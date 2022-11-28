@@ -9,16 +9,18 @@
     "language": "Language",
     "appOfGgMeet": "App of Goog Meet",
     "backToHome": "Back to home page",
-    "createMeeting.title": "Quality video meetings. Now it's free for everyone.",
-    "createMeeting.description": "We've redesigned Google Meet — our highly secure business meeting service — to make it available to everyone at no cost.",
-    "createMeeting.createLater": "Create a meeting for later use",
+    "createMeeting.title": "Secure video conferencing for everyone.",
+    "createMeeting.description": "Connect, collaborate, and celebrate from anywhere with Google Meet.",
+    "createMeeting.createLater": "Create a meeting for later",
     "createMeeting.startNow": "Start an instant meeting",
     "createMeeting.newMeeting": "New meeting",
-    "createMeeting.enterMeetingCode": "Enter meeting code or link",
+    "createMeeting.enterMeetingCode": "Enter a code or nickname",
     "createMeeting.learnMore": "Learn more",
     "createMeeting.aboutWeb": "about Google Meet",
     "loginPage.title": "Sign in",
     "loginPage.facebook": "Sign in with Facebook",
     "loginPage.google": "Sign in with Google",
-    "loginPage.github": "Sign in with Github"
+    "loginPage.github": "Sign in with Github",
+    "language.en": "English",
+    "language.vi": "Vietnamese"
 }

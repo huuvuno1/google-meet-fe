@@ -6,6 +6,7 @@ import 'react-app-polyfill/stable';
 import 'sanitize.css/sanitize.css';
 // Initialize languages
 import './locales/i18n';
+import 'boxicons';
 
 // Import root app
 import { App } from 'app';

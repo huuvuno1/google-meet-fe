@@ -8,9 +8,9 @@ import { Button, Col, Divider, Input, Row, Space, Typography } from 'antd';
 import MyPopover from 'app/components/MyPopover';
 import IntroSlider from 'app/pages/Home/components/IntroSlider';
 import classNames from 'classnames/bind';
-import { useState } from 'react';
+import { memo, useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import styles from './CreateMeeting.module.scss';
 
@@ -18,9 +18,28 @@ import styles from './CreateMeeting.module.scss';
 const { Text, Title } = Typography;
 
 const cx = classNames.bind(styles);
-export function CreateMeeting() {
+function CreateMeeting() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const handleStartNowClick = useCallback(() => {
+    navigate('/meet');
+  }, [navigate]);
+
+  const popoverItems = useMemo(() => {
+    return [
+      {
+        label: t('createMeeting.createLater'),
+        icon: <LinkOutlined className={cx('item-icon', 'text-3xl')} />,
+      },
+      {
+        label: t('createMeeting.startNow'),
+        icon: <PlusOutlined className={cx('text-3xl', 'item-icon')} />,
+        onClick: handleStartNowClick,
+      },
+    ];
+  }, [t]);
+
   return (
     <Row className={cx('h-remaining')}>
       <Col
@@ -38,22 +57,10 @@ export function CreateMeeting() {
         <div className="mt-24">
           <Space>
             <MyPopover
-              items={[
-                {
-                  label: t('createMeeting.createLater'),
-                  icon: (
-                    <LinkOutlined className={cx('item-icon', 'text-3xl')} />
-                  ),
-                },
-                {
-                  label: t('createMeeting.startNow'),
-                  icon: (
-                    <PlusOutlined className={cx('text-3xl', 'item-icon')} />
-                  ),
-                },
-              ]}
+              items={popoverItems}
               open={open}
               onOpenChange={setOpen}
+              itemCss={cx('text-16')}
             >
               <Button
                 type="primary"
@@ -84,3 +91,5 @@ export function CreateMeeting() {
     </Row>
   );
 }
+
+export default memo(CreateMeeting);

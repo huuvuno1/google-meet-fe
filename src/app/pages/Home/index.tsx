@@ -1,7 +1,7 @@
 import { Col, Row, Space } from 'antd';
 import Title from 'antd/lib/typography/Title';
-import { CreateMeeting } from 'app/containers/CreateMeeting';
-import { HomeNavBar } from 'app/containers/HomeNavBar';
+import CreateMeeting from 'app/containers/CreateMeeting';
+import HomeNavBar from 'app/containers/HomeNavBar';
 import LogoFull from 'assets/images/logo-full.png';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';

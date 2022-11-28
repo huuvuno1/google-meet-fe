@@ -10,7 +10,7 @@ import { Avatar, Button, Popover, Space, Tooltip } from 'antd';
 import MyPopover from 'app/components/MyPopover';
 import classNames from 'classnames/bind';
 import moment from 'moment';
-import { useCallback, useEffect, useState } from 'react';
+import { memo, useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
@@ -18,7 +18,7 @@ import styles from './HomeNavBar.module.scss';
 
 const cx = classNames.bind(styles);
 
-export function HomeNavBar() {
+function HomeNavBar() {
   const { t, i18n } = useTranslation();
   const [question, setQuestion] = useState(false);
   const [timeFormater, setTimeFormater] = useState('');
@@ -32,6 +32,23 @@ export function HomeNavBar() {
     },
     [i18n, setOpenPopover],
   );
+
+  const languages = useMemo(() => {
+    return [
+      {
+        label: t('language.en'),
+        value: 'en',
+        icon: <span className="mr-9">{'𝓮𝓷'}</span>,
+        onClick: (value: any) => changeLanguage(value),
+      },
+      {
+        label: t('language.vi'),
+        value: 'vi',
+        icon: <span className="mr-9">{'𝓿𝓲'}</span>,
+        onClick: (value: any) => changeLanguage(value),
+      },
+    ];
+  }, [changeLanguage, t]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -100,20 +117,7 @@ export function HomeNavBar() {
       ) : (
         <Space>
           <MyPopover
-            items={[
-              {
-                label: 'English',
-                value: 'en',
-                icon: <span className="mr-9">{'𝓮𝓷'}</span>,
-                onClick: value => changeLanguage(value),
-              },
-              {
-                label: 'Vietnamese',
-                value: 'vi',
-                icon: <span className="mr-9">{'𝓿𝓲'}</span>,
-                onClick: value => changeLanguage(value),
-              },
-            ]}
+            items={languages}
             open={openPopover}
             onOpenChange={setOpenPopover}
             position="top-right"
@@ -140,3 +144,5 @@ export function HomeNavBar() {
     </Space>
   );
 }
+
+export default memo(HomeNavBar);

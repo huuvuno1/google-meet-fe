@@ -20,5 +20,7 @@
     "loginPage.title": "Đăng nhập",
     "loginPage.facebook": "Đăng nhập bằng Facebook",
     "loginPage.google": "Đăng nhập bằng Google",
-    "loginPage.github": "Đăng nhập bằng Github"
+    "loginPage.github": "Đăng nhập bằng Github",
+    "language.en": "Tiếng Anh",
+    "language.vi": "Tiếng Việt"
 }
