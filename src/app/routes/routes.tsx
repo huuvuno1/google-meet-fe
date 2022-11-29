@@ -10,7 +10,7 @@ import { PublicRoutes } from './types';
 //Public routes
 const publicRoutes: PublicRoutes[] = [
   {
-    path: '/',
+    path: '/*',
     component: Home,
     layout: ScreenLayout,
   },
