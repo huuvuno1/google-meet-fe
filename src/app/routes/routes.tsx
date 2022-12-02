@@ -1,5 +1,6 @@
 //Layout
 import NoFooterLayout from 'app/layouts/NoFooterLayout';
+import ScreenLayout from 'app/layouts/ScreenLayout';
 import { Home } from 'app/pages/Home';
 import { Introduction } from 'app/pages/Introduction';
 import { Meeting } from 'app/pages/Meeting';
@@ -9,12 +10,9 @@ import { PublicRoutes } from './types';
 //Public routes
 const publicRoutes: PublicRoutes[] = [
   {
-    path: '/',
-    component: Meeting,
-  },
-  {
-    path: '/home',
+    path: '/*',
     component: Home,
+    layout: ScreenLayout,
   },
   {
     path: '/introduction',
@@ -26,8 +24,9 @@ const publicRoutes: PublicRoutes[] = [
     layout: NoFooterLayout,
   },
   {
-    path: '/meeting',
-    component: Introduction,
+    path: '/meet',
+    component: Meeting,
+    layout: ScreenLayout,
   },
 ];
 

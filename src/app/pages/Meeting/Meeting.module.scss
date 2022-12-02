@@ -1,0 +1,14 @@
+$hMenu: 77px;
+$bgMain: #202124;
+
+.h-remaining {
+    height: calc(100vh - #{$hMenu});
+}
+
+.h-menu {
+    height: $hMenu;
+}
+
+.wrapper {
+    background-color: $bgMain;
+}

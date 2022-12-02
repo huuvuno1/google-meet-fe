@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ant-popover-inner-content {
+    padding: 0 !important;
+}
+
+.h-remaining{
+    height: calc(100vh - 70px);
+}
+
+.intro-slider .slick-active button {
+    background-color: #5e5ef9 !important;
+}
+
+.txt-26 {
+    font-size: 26px;
+}
+
+.txt-20 {
+    font-size: 20px;
+}
+
+.txt-22 {
+    font-size: 22px;
+}
+
+.txt-24 {
+    font-size: 24px;
+}
+
+.txt-26 {
+    font-size: 26px;
+}
+
+.txt-28 {
+    font-size: 28px;
+}
+
+.option-custom .ant-badge-count {
+    box-shadow: unset !important;
+}
